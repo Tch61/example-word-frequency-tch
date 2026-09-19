@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "setuptools-scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example-word-frequency-tch"
+description = "CLI utility for counting word frequencies"
+readme = "README.md"
+license = "BSD-2-Clause"
+authors = [
+	{name = "Serge Tch", email = "tchesnotchkov@outlook.com"},
+]
+requires-python = ">=3.9"
+dependencies = [
+	"rich>=14",
+]
+keywords = [
+	"word frequencies tool",
+]
+dynamic = ["version"]
+
+[project.urls]
+Home = "https://github.com/Tch61/example-word-frequency-tch"
+Repository = "https://github.com/Tch61/example-word-frequency-tch.git"
+Issues = "https://github.com/Tch61/example-word-frequency-tch/issues"
+
+[project.scripts]
+word-frequency = "example_word_frequency_tch.cli:main"
+
+[project.optional-dependencies]
+dev = [
+	"pytest",
+	"mypy",
+]
+
+[tool.setuptools.package-data]
+"example_word_frequency_tch.resources" = ["*"]
+
+[tool.mypy]
+files = ["src/example_word_frequency_tch"]
+python_version = "3.9"
+strict = true
+disallow_subclassing_any = false
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+fallback_version = "0.0.0"
+
