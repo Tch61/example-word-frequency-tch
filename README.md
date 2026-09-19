@@ -1,4 +1,4 @@
-Word Frequency Counter is a simple CLI tool to count word occurrences in text files.
+Word Frequency Counter is a simple CLI tool to count word occurrences in text files!
 
 
 Features:
